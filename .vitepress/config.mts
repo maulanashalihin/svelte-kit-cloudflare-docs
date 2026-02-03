@@ -42,7 +42,8 @@ export default defineConfig({
           text: '🤖 AI Agent Workflow',
           collapsed: false,
           items: [
-            { text: 'Quick Start', link: '/guide/ai-first-development#overview' },
+            { text: 'Overview', link: '/guide/ai-first-development#overview' },
+            { text: 'Quick Start', link: '/guide/ai-first-development#quick-start' },
             { text: 'INIT_AGENT — Setup', link: '/guide/ai-first-development#init-agent' },
             { text: 'TASK_AGENT — Implement', link: '/guide/ai-first-development#task-agent' },
             { text: 'MANAGER_AGENT — Manage', link: '/guide/ai-first-development#manager-agent' },
