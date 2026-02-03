@@ -97,12 +97,17 @@ CLOUDFLARE_API_TOKEN=your_api_token_here
 
 ---
 
-### Step 5: Apply Migration (30 detik)
+### Step 5: Generate & Apply Migration (30 detik)
 
 ```bash
-# Buat tabel database
+# Generate migrations dari schema (jalankan ini pertama kali)
+npm run db:generate
+
+# Apply migrations ke database local
 npm run db:migrate:local
 ```
+
+> **Catatan:** Jalankan `npm run db:generate` setiap kali ada perubahan di `src/lib/db/schema.ts`
 
 **Verifikasi berhasil:**
 ```bash
@@ -181,8 +186,10 @@ npm run dev              # Start dev server
 npm run dev -- --host    # Expose ke network
 
 # Database
+npm run db:generate      # Generate migrations dari schema.ts
 npm run db:migrate:local # Apply migrations (local)
 npm run db:migrate       # Apply migrations (production)
+npm run db:refresh:local # Reset local DB + reapply migrations
 npm run db:studio        # Buka Drizzle Studio GUI
 
 # Build & Deploy
@@ -193,6 +200,58 @@ npm run deploy           # Deploy ke Cloudflare Pages
 # Utility
 npx wrangler whoami      # Check login status
 npx wrangler d1 list     # List databases
+```
+
+---
+
+## 📁 Project Structure
+
+```
+.
+├── src/
+│   ├── lib/
+│   │   ├── auth/           # Authentication utilities
+│   │   ├── db/             # Database schema & types
+│   │   ├── email/          # Email service (Resend)
+│   │   ├── image/          # Image processing
+│   │   └── storage/        # R2 storage helpers
+│   ├── routes/             # SvelteKit routes
+│   └── app.html            # HTML template
+├── drizzle/                # Database migrations
+├── workflow/               # AI Agent workflow files
+├── static/                 # Static assets
+├── wrangler.toml           # Cloudflare config
+└── package.json
+```
+
+---
+
+## 🚀 Optional Features
+
+Setelah setup dasar, kamu bisa tambahkan fitur optional:
+
+### Google OAuth
+```bash
+# Tambahkan ke .env:
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
+```
+
+### Email Verification
+```bash
+# Tambahkan ke .env:
+RESEND_API_TOKEN=re_your_token
+FROM_EMAIL=noreply@yourdomain.com
+```
+
+### File Upload (R2)
+```bash
+# Tambahkan ke .env:
+R2_ACCOUNT_ID=your_r2_account_id
+R2_ACCESS_KEY_ID=your_r2_access_key
+R2_SECRET_ACCESS_KEY=your_r2_secret_key
+R2_BUCKET_NAME=your_bucket
+R2_PUBLIC_URL=https://pub-xxx.r2.dev
 ```
 
 ---
