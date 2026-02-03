@@ -10,20 +10,20 @@ Project ini menggunakan **3 AI Agent** yang bekerja sama:
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                     AI AGENT WORKFLOW                            │
+│                     AI AGENT WORKFLOW                           │
 ├─────────────────────────────────────────────────────────────────┤
-│                                                                  │
-│  INIT_AGENT → TASK_AGENT → Cloudflare → MANAGER_AGENT          │
-│                                                                  │
+│                                                                 │
+│  INIT_AGENT → TASK_AGENT → MANAGER_AGENT                        │
+│                                                                 │
 │  1. INIT_AGENT: Setup project & dokumentasi                     │
-│     └── Buat PRD.md, TDD.md, ui-kit.html, PROGRESS.md          │
-│                                                                  │
+│     └── Buat PRD.md, TDD.md, ui-kit.html, PROGRESS.md           │
+│                                                                 │
 │  2. TASK_AGENT: Implementasi fitur                              │
-│     └── Baca PROGRESS.md → Implement → Test → Commit           │ 
-│                                                                  │
+│     └── Baca PROGRESS.md → Implement → Test → Commit            │
+│                                                                 │
 │  3. MANAGER_AGENT: Change management                            │
-│     └── Update docs → Approve → Release notes                  │
-│                                                                  │
+│     └── Update docs → Approve → Release notes                   │
+│                                                                 │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
