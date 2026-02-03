@@ -20,7 +20,7 @@ Setup project SvelteKit Cloudflare dari nol sampai bisa coding.
 
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/sveltekit-cf-starter.git my-app
+git clone https://github.com/maulanashalihin/svelte-kit-cloudflare-starter.git my-app
 cd my-app
 
 # Install dependencies
