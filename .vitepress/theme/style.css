@@ -1,0 +1,506 @@
+/**
+ * SvelteKit CF Starter - Dark Elegance Theme
+ * Warna disesuaikan dengan starter kit
+ * FORCE DARK MODE ONLY - No light mode
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+
+/* ========================================
+   Force Dark Mode - Disable Light Mode
+   ======================================== */
+
+:root,
+html,
+html.dark {
+  color-scheme: dark !important;
+}
+
+/* Hide appearance toggle button */
+.VPSwitchAppearance {
+  display: none !important;
+}
+
+/* ========================================
+   CSS Variables - Neutral Dark Theme
+   ======================================== */
+
+:root,
+html,
+html.dark {
+  /* Neutral Color Scale (from starter kit) */
+  --sk-neutral-50: #fafafa;
+  --sk-neutral-100: #f5f5f5;
+  --sk-neutral-200: #e5e5e5;
+  --sk-neutral-300: #d4d4d4;
+  --sk-neutral-400: #a3a3a3;
+  --sk-neutral-500: #737373;
+  --sk-neutral-600: #525252;
+  --sk-neutral-700: #404040;
+  --sk-neutral-800: #262626;
+  --sk-neutral-900: #171717;
+  --sk-neutral-950: #0a0a0a;
+
+  /* Accent Color (Amber from starter kit) */
+  --sk-accent-50: #fffbeb;
+  --sk-accent-100: #fef3c7;
+  --sk-accent-200: #fde68a;
+  --sk-accent-300: #fcd34d;
+  --sk-accent-400: #fbbf24;
+  --sk-accent-500: #f59e0b;
+  --sk-accent-600: #d97706;
+  --sk-accent-700: #b45309;
+
+  /* Rose Color (Secondary accent) */
+  --sk-rose-400: #fb7185;
+  --sk-rose-500: #f43f5e;
+}
+
+/* ========================================
+   Dark Mode - Only Theme
+   ======================================== */
+
+:root,
+html,
+html.dark {
+  /* Background */
+  --vp-c-bg: var(--sk-neutral-950);
+  --vp-c-bg-alt: var(--sk-neutral-900);
+  --vp-c-bg-elv: var(--sk-neutral-900);
+  --vp-c-bg-soft: rgba(38, 38, 38, 0.5);
+
+  /* Text */
+  --vp-c-text-1: var(--sk-neutral-100);
+  --vp-c-text-2: var(--sk-neutral-400);
+  --vp-c-text-3: var(--sk-neutral-500);
+
+  /* Border */
+  --vp-c-border: var(--sk-neutral-800);
+  --vp-c-divider: var(--sk-neutral-800);
+  --vp-c-gutter: var(--sk-neutral-800);
+
+  /* Brand (Amber accent) */
+  --vp-c-brand-1: var(--sk-accent-400);
+  --vp-c-brand-2: var(--sk-accent-500);
+  --vp-c-brand-3: var(--sk-accent-600);
+  --vp-c-brand-soft: rgba(245, 158, 11, 0.15);
+
+  /* Default */
+  --vp-c-default-1: var(--sk-neutral-400);
+  --vp-c-default-2: var(--sk-neutral-500);
+  --vp-c-default-3: var(--sk-neutral-600);
+  --vp-c-default-soft: rgba(64, 64, 64, 0.5);
+
+  /* Tip */
+  --vp-c-tip-1: var(--sk-accent-400);
+  --vp-c-tip-2: var(--sk-accent-500);
+  --vp-c-tip-3: var(--sk-accent-600);
+  --vp-c-tip-soft: rgba(245, 158, 11, 0.15);
+
+  /* Warning */
+  --vp-c-warning-1: #fcd34d;
+  --vp-c-warning-2: #fbbf24;
+  --vp-c-warning-3: #f59e0b;
+  --vp-c-warning-soft: rgba(251, 191, 36, 0.15);
+
+  /* Danger */
+  --vp-c-danger-1: var(--sk-rose-400);
+  --vp-c-danger-2: var(--sk-rose-500);
+  --vp-c-danger-3: #e11d48;
+  --vp-c-danger-soft: rgba(244, 63, 94, 0.15);
+}
+
+/* ========================================
+   Typography
+   ======================================== */
+
+:root,
+html,
+html.dark {
+  --vp-font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
+  --vp-font-family-mono: 'Fira Code', 'SF Mono', Monaco, monospace;
+}
+
+/* ========================================
+   Home Page Hero
+   ======================================== */
+
+:root,
+html,
+html.dark {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(
+    135deg,
+    var(--sk-accent-400) 0%,
+    var(--sk-rose-400) 100%
+  );
+
+  --vp-home-hero-image-background-image: linear-gradient(
+    -45deg,
+    var(--sk-accent-500) 50%,
+    var(--sk-rose-500) 50%
+  );
+  --vp-home-hero-image-filter: blur(60px);
+  opacity: 0.6;
+}
+
+@media (min-width: 640px) {
+  :root,
+  html,
+  html.dark {
+    --vp-home-hero-image-filter: blur(70px);
+  }
+}
+
+@media (min-width: 960px) {
+  :root,
+  html,
+  html.dark {
+    --vp-home-hero-image-filter: blur(80px);
+  }
+}
+
+/* ========================================
+   Button Styles
+   ======================================== */
+
+:root,
+html,
+html.dark {
+  --vp-button-brand-border: transparent;
+  --vp-button-brand-text: var(--sk-neutral-950);
+  --vp-button-brand-bg: var(--sk-accent-500);
+  --vp-button-brand-hover-border: transparent;
+  --vp-button-brand-hover-text: var(--sk-neutral-950);
+  --vp-button-brand-hover-bg: var(--sk-accent-400);
+  --vp-button-brand-active-border: transparent;
+  --vp-button-brand-active-text: var(--sk-neutral-950);
+  --vp-button-brand-active-bg: var(--sk-accent-600);
+
+  --vp-button-alt-border: var(--sk-neutral-700);
+  --vp-button-alt-text: var(--sk-neutral-200);
+  --vp-button-alt-bg: var(--sk-neutral-800);
+  --vp-button-alt-hover-border: var(--sk-neutral-600);
+  --vp-button-alt-hover-text: var(--sk-neutral-100);
+  --vp-button-alt-hover-bg: var(--sk-neutral-700);
+}
+
+/* ========================================
+   Custom Blocks
+   ======================================== */
+
+:root,
+html,
+html.dark {
+  --vp-custom-block-tip-border: var(--sk-accent-500);
+  --vp-custom-block-tip-text: var(--sk-neutral-100);
+  --vp-custom-block-tip-bg: rgba(245, 158, 11, 0.1);
+  --vp-custom-block-tip-code-bg: rgba(64, 64, 64, 0.5);
+
+  --vp-custom-block-info-border: var(--sk-neutral-600);
+  --vp-custom-block-info-text: var(--sk-neutral-200);
+  --vp-custom-block-info-bg: rgba(64, 64, 64, 0.3);
+  --vp-custom-block-info-code-bg: rgba(64, 64, 64, 0.5);
+
+  --vp-custom-block-warning-border: #fbbf24;
+  --vp-custom-block-warning-text: #fef3c7;
+  --vp-custom-block-warning-bg: rgba(251, 191, 36, 0.1);
+  --vp-custom-block-warning-code-bg: rgba(64, 64, 64, 0.5);
+
+  --vp-custom-block-danger-border: var(--sk-rose-500);
+  --vp-custom-block-danger-text: #ffe4e6;
+  --vp-custom-block-danger-bg: rgba(244, 63, 94, 0.1);
+  --vp-custom-block-danger-code-bg: rgba(64, 64, 64, 0.5);
+}
+
+/* Custom block titles */
+.vp-doc .custom-block.tip .custom-block-title {
+  color: var(--sk-accent-400);
+}
+
+.vp-doc .custom-block.info .custom-block-title {
+  color: var(--sk-neutral-300);
+}
+
+.vp-doc .custom-block.warning .custom-block-title {
+  color: #fbbf24;
+}
+
+.vp-doc .custom-block.danger .custom-block-title {
+  color: var(--sk-rose-400);
+}
+
+/* ========================================
+   Sidebar & Navigation
+   ======================================== */
+
+.VPSidebar {
+  background-color: var(--sk-neutral-950) !important;
+  border-right: 1px solid var(--sk-neutral-800);
+}
+
+.VPSidebarItem .item:hover {
+  background-color: rgba(245, 158, 11, 0.1);
+  color: var(--sk-accent-400);
+}
+
+.VPSidebarItem.is-active .item {
+  background-color: rgba(245, 158, 11, 0.15);
+  color: var(--sk-accent-400);
+}
+
+/* ========================================
+   Navbar
+   ======================================== */
+
+.VPNav {
+  background-color: rgba(10, 10, 10, 0.8) !important;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--sk-neutral-800);
+}
+
+.VPNavBarTitle .title {
+  color: var(--sk-neutral-100);
+  font-weight: 600;
+}
+
+/* ========================================
+   Content Area
+   ======================================== */
+
+.VPDoc {
+  background-color: var(--sk-neutral-950);
+}
+
+.VPDocAside {
+  background-color: var(--sk-neutral-950);
+}
+
+/* ========================================
+   Links
+   ======================================== */
+
+.vp-doc a {
+  color: var(--sk-accent-400);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s;
+}
+
+.vp-doc a:hover {
+  color: var(--sk-accent-300);
+  border-bottom-color: var(--sk-accent-500);
+}
+
+/* ========================================
+   Code Blocks
+   ======================================== */
+
+.vp-doc div[class*='language-'] {
+  background-color: var(--sk-neutral-900);
+  border: 1px solid var(--sk-neutral-800);
+  border-radius: 12px;
+}
+
+/* Inline code - lebih soft, tidak orange */
+.vp-doc code {
+  color: var(--sk-neutral-200);
+  background-color: rgba(64, 64, 64, 0.4);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+/* Code di dalam link */
+.vp-doc a code {
+  color: var(--sk-accent-300);
+  background-color: rgba(245, 158, 11, 0.1);
+}
+
+/* Code block - syntax highlighting lebih kontras */
+.vp-doc pre code {
+  color: var(--sk-neutral-200);
+  background-color: transparent;
+  padding: 0;
+}
+
+/* Syntax highlighting colors yang lebih nyaman */
+.vp-doc .token.comment,
+.vp-doc .token.prolog,
+.vp-doc .token.doctype,
+.vp-doc .token.cdata {
+  color: var(--sk-neutral-500);
+}
+
+.vp-doc .token.property,
+.vp-doc .token.tag,
+.vp-doc .token.boolean,
+.vp-doc .token.number,
+.vp-doc .token.constant,
+.vp-doc .token.symbol {
+  color: #93c5fd; /* soft blue */
+}
+
+.vp-doc .token.selector,
+.vp-doc .token.attr-name,
+.vp-doc .token.string,
+.vp-doc .token.char,
+.vp-doc .token.builtin {
+  color: #86efac; /* soft green */
+}
+
+.vp-doc .token.operator,
+.vp-doc .token.entity,
+.vp-doc .token.url,
+.vp-doc .token.variable {
+  color: var(--sk-neutral-300);
+}
+
+.vp-doc .token.atrule,
+.vp-doc .token.attr-value,
+.vp-doc .token.keyword {
+  color: #fca5a5; /* soft red/pink */
+}
+
+.vp-doc .token.function,
+.vp-doc .token.class-name {
+  color: #fcd34d; /* soft yellow */
+}
+
+.vp-doc .token.regex,
+.vp-doc .token.important {
+  color: #fdba74; /* soft orange */
+}
+
+/* ========================================
+   Tables
+   ======================================== */
+
+.vp-doc table {
+  border: 1px solid var(--sk-neutral-800);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.vp-doc th {
+  background-color: var(--sk-neutral-900);
+  color: var(--sk-neutral-100);
+  border-bottom: 1px solid var(--sk-neutral-800);
+}
+
+.vp-doc td {
+  border-bottom: 1px solid var(--sk-neutral-800);
+}
+
+.vp-doc tr:nth-child(2n) {
+  background-color: rgba(38, 38, 38, 0.3);
+}
+
+/* ========================================
+   Selection
+   ======================================== */
+
+::selection {
+  background-color: rgba(245, 158, 11, 0.3);
+  color: var(--sk-neutral-100);
+}
+
+/* ========================================
+   Scrollbar
+   ======================================== */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--sk-neutral-900);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--sk-neutral-700);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--sk-neutral-600);
+}
+
+/* ========================================
+   Search
+   ======================================== */
+
+.DocSearch-Modal {
+  background-color: var(--sk-neutral-900) !important;
+  border: 1px solid var(--sk-neutral-800);
+}
+
+.DocSearch-SearchBar {
+  background-color: var(--sk-neutral-950) !important;
+}
+
+.DocSearch-Input {
+  background-color: var(--sk-neutral-800) !important;
+  color: var(--sk-neutral-100) !important;
+}
+
+/* ========================================
+   Footer
+   ======================================== */
+
+.VPFooter {
+  background-color: var(--sk-neutral-950);
+  border-top: 1px solid var(--sk-neutral-800);
+}
+
+/* ========================================
+   Feature Cards (Homepage)
+   ======================================== */
+
+.VPFeature {
+  background-color: var(--sk-neutral-900) !important;
+  border: 1px solid var(--sk-neutral-800);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.VPFeature:hover {
+  border-color: var(--sk-neutral-700);
+  transform: translateY(-2px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+.VPFeature .icon {
+  color: var(--sk-accent-500);
+}
+
+/* ========================================
+   Action Buttons (Homepage)
+   ======================================== */
+
+.VPButton {
+  border-radius: 10px !important;
+  font-weight: 600 !important;
+  transition: all 0.2s ease !important;
+}
+
+.VPButton.medium.brand {
+  background-color: var(--sk-accent-500) !important;
+  color: var(--sk-neutral-950) !important;
+}
+
+.VPButton.medium.brand:hover {
+  background-color: var(--sk-accent-400) !important;
+}
+
+.VPButton.medium.alt {
+  background-color: var(--sk-neutral-800) !important;
+  border-color: var(--sk-neutral-700) !important;
+  color: var(--sk-neutral-200) !important;
+}
+
+.VPButton.medium.alt:hover {
+  background-color: var(--sk-neutral-700) !important;
+  border-color: var(--sk-neutral-600) !important;
+}

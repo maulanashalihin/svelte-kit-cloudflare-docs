@@ -1,0 +1,16 @@
+# VitePress cache
+.vitepress/cache
+.vitepress/dist
+
+# Node modules
+node_modules
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
