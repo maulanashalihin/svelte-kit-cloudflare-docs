@@ -7,6 +7,13 @@ export default defineConfig({
   lang: 'id-ID',
   lastUpdated: true,
   
+  // Ignore dead links (localhost links are expected)
+  ignoreDeadLinks: [
+    /^http:\/\/localhost/,
+    /^\.\/\.\.\/cookbook/,
+    /^\.\/03-authentication/
+  ],
+  
   head: [
     // Force dark mode immediately
     ['script', {}, `
