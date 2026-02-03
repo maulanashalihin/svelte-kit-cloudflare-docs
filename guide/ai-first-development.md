@@ -4,7 +4,7 @@ Panduan menggunakan **3 AI Agent** untuk mengembangkan aplikasi dengan SvelteKit
 
 ---
 
-## 🎯 Overview
+## 🎯 Overview {#overview}
 
 Project ini menggunakan **3 AI Agent** yang bekerja sama:
 
