@@ -1,33 +1,15 @@
 /**
  * SvelteKit CF Starter - Dark Elegance Theme
  * Warna disesuaikan dengan starter kit
- * FORCE DARK MODE ONLY - No light mode
  */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
 
 /* ========================================
-   Force Dark Mode - Disable Light Mode
-   ======================================== */
-
-:root,
-html,
-html.dark {
-  color-scheme: dark !important;
-}
-
-/* Hide appearance toggle button */
-.VPSwitchAppearance {
-  display: none !important;
-}
-
-/* ========================================
    CSS Variables - Neutral Dark Theme
    ======================================== */
 
-:root,
-html,
-html.dark {
+:root {
   /* Neutral Color Scale (from starter kit) */
   --sk-neutral-50: #fafafa;
   --sk-neutral-100: #f5f5f5;

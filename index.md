@@ -17,7 +17,7 @@ hero:
       link: /guide/ai-first-development
     - theme: alt
       text: 🐙 GitHub
-      link: https://github.com/yourusername/sveltekit-cf-starter
+      link: https://github.com/maulanashalihin/svelte-kit-cloudflare-starter.git
 
 features:
   - icon: 🤖
@@ -91,7 +91,7 @@ Just describe what you want, and let the AI Agents build it.
 
 ```bash
 # 1. Clone starter
-git clone https://github.com/yourusername/sveltekit-cf-starter.git my-app
+git clone https://github.com/maulanashalihin/svelte-kit-cloudflare-starter.git my-app
 cd my-app && npm install
 
 # 2. Create database (one command)

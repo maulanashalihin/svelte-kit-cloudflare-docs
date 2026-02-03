@@ -10,22 +10,13 @@ export default defineConfig({
   // Ignore dead links (localhost links are expected)
   ignoreDeadLinks: [
     /^http:\/\/localhost/,
-    /^\.\/\.\.\/cookbook/,
-    /^\.\/03-authentication/
-  ],
-  
-  head: [
-    // Force dark mode immediately
-    ['script', {}, `
-      (function() {
-        document.documentElement.classList.add('dark')
-        document.documentElement.style.colorScheme = 'dark'
-      })()
-    `]
+    /^\.\.\/cookbook/,
+    /^\.\/03-authentication/,
+    /cookbook/
   ],
   
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
+    // https://vitepress.dev/reference/default-theme-default-theme-config
     logo: '/logo.svg',
     
     nav: [
