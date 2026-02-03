@@ -39,11 +39,61 @@
 }
 
 /* ========================================
-   Dark Mode - Only Theme
+   Light Mode (Default)
    ======================================== */
 
-:root,
-html,
+:root {
+  /* Background */
+  --vp-c-bg: #ffffff;
+  --vp-c-bg-alt: #f8f9fa;
+  --vp-c-bg-elv: #ffffff;
+  --vp-c-bg-soft: #f5f5f5;
+
+  /* Text */
+  --vp-c-text-1: #1a1a1a;
+  --vp-c-text-2: #4a4a4a;
+  --vp-c-text-3: #737373;
+
+  /* Border */
+  --vp-c-border: #e5e5e5;
+  --vp-c-divider: #e5e5e5;
+  --vp-c-gutter: #e5e5e5;
+
+  /* Brand (Amber accent) */
+  --vp-c-brand-1: #d97706;
+  --vp-c-brand-2: #f59e0b;
+  --vp-c-brand-3: #fbbf24;
+  --vp-c-brand-soft: rgba(245, 158, 11, 0.1);
+
+  /* Default */
+  --vp-c-default-1: #525252;
+  --vp-c-default-2: #737373;
+  --vp-c-default-3: #a3a3a3;
+  --vp-c-default-soft: rgba(0, 0, 0, 0.05);
+
+  /* Tip */
+  --vp-c-tip-1: #d97706;
+  --vp-c-tip-2: #f59e0b;
+  --vp-c-tip-3: #fbbf24;
+  --vp-c-tip-soft: rgba(245, 158, 11, 0.1);
+
+  /* Warning */
+  --vp-c-warning-1: #d97706;
+  --vp-c-warning-2: #f59e0b;
+  --vp-c-warning-3: #fbbf24;
+  --vp-c-warning-soft: rgba(251, 191, 36, 0.1);
+
+  /* Danger */
+  --vp-c-danger-1: #e11d48;
+  --vp-c-danger-2: #f43f5e;
+  --vp-c-danger-3: #fb7185;
+  --vp-c-danger-soft: rgba(244, 63, 94, 0.1);
+}
+
+/* ========================================
+   Dark Mode
+   ======================================== */
+
 html.dark {
   /* Background */
   --vp-c-bg: var(--sk-neutral-950);
@@ -217,18 +267,18 @@ html.dark {
    ======================================== */
 
 .VPSidebar {
-  background-color: var(--sk-neutral-950) !important;
-  border-right: 1px solid var(--sk-neutral-800);
+  background-color: var(--vp-c-bg) !important;
+  border-right: 1px solid var(--vp-c-border);
 }
 
 .VPSidebarItem .item:hover {
-  background-color: rgba(245, 158, 11, 0.1);
-  color: var(--sk-accent-400);
+  background-color: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
 }
 
 .VPSidebarItem.is-active .item {
-  background-color: rgba(245, 158, 11, 0.15);
-  color: var(--sk-accent-400);
+  background-color: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
 }
 
 /* ========================================
@@ -236,13 +286,13 @@ html.dark {
    ======================================== */
 
 .VPNav {
-  background-color: rgba(10, 10, 10, 0.8) !important;
+  background-color: var(--vp-c-bg) !important;
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--sk-neutral-800);
+  border-bottom: 1px solid var(--vp-c-border);
 }
 
 .VPNavBarTitle .title {
-  color: var(--sk-neutral-100);
+  color: var(--vp-c-text-1);
   font-weight: 600;
 }
 
@@ -251,11 +301,11 @@ html.dark {
    ======================================== */
 
 .VPDoc {
-  background-color: var(--sk-neutral-950);
+  background-color: var(--vp-c-bg);
 }
 
 .VPDocAside {
-  background-color: var(--sk-neutral-950);
+  background-color: var(--vp-c-bg);
 }
 
 /* ========================================
@@ -279,15 +329,15 @@ html.dark {
    ======================================== */
 
 .vp-doc div[class*='language-'] {
-  background-color: var(--sk-neutral-900);
-  border: 1px solid var(--sk-neutral-800);
+  background-color: var(--vp-c-bg-alt);
+  border: 1px solid var(--vp-c-border);
   border-radius: 12px;
 }
 
 /* Inline code - lebih soft, tidak orange */
 .vp-doc code {
-  color: var(--sk-neutral-200);
-  background-color: rgba(64, 64, 64, 0.4);
+  color: var(--vp-c-text-2);
+  background-color: var(--vp-c-bg-soft);
   padding: 2px 6px;
   border-radius: 4px;
   font-size: 0.9em;
@@ -295,13 +345,13 @@ html.dark {
 
 /* Code di dalam link */
 .vp-doc a code {
-  color: var(--sk-accent-300);
-  background-color: rgba(245, 158, 11, 0.1);
+  color: var(--vp-c-brand-1);
+  background-color: var(--vp-c-brand-soft);
 }
 
 /* Code block - syntax highlighting lebih kontras */
 .vp-doc pre code {
-  color: var(--sk-neutral-200);
+  color: var(--vp-c-text-1);
   background-color: transparent;
   padding: 0;
 }
@@ -311,7 +361,7 @@ html.dark {
 .vp-doc .token.prolog,
 .vp-doc .token.doctype,
 .vp-doc .token.cdata {
-  color: var(--sk-neutral-500);
+  color: var(--vp-c-text-3);
 }
 
 .vp-doc .token.property,
@@ -335,7 +385,7 @@ html.dark {
 .vp-doc .token.entity,
 .vp-doc .token.url,
 .vp-doc .token.variable {
-  color: var(--sk-neutral-300);
+  color: var(--vp-c-text-2);
 }
 
 .vp-doc .token.atrule,
@@ -359,23 +409,23 @@ html.dark {
    ======================================== */
 
 .vp-doc table {
-  border: 1px solid var(--sk-neutral-800);
+  border: 1px solid var(--vp-c-border);
   border-radius: 8px;
   overflow: hidden;
 }
 
 .vp-doc th {
-  background-color: var(--sk-neutral-900);
-  color: var(--sk-neutral-100);
-  border-bottom: 1px solid var(--sk-neutral-800);
+  background-color: var(--vp-c-bg-alt);
+  color: var(--vp-c-text-1);
+  border-bottom: 1px solid var(--vp-c-border);
 }
 
 .vp-doc td {
-  border-bottom: 1px solid var(--sk-neutral-800);
+  border-bottom: 1px solid var(--vp-c-border);
 }
 
 .vp-doc tr:nth-child(2n) {
-  background-color: rgba(38, 38, 38, 0.3);
+  background-color: var(--vp-c-bg-soft);
 }
 
 /* ========================================
@@ -383,8 +433,8 @@ html.dark {
    ======================================== */
 
 ::selection {
-  background-color: rgba(245, 158, 11, 0.3);
-  color: var(--sk-neutral-100);
+  background-color: var(--vp-c-brand-soft);
+  color: var(--vp-c-text-1);
 }
 
 /* ========================================
@@ -397,16 +447,16 @@ html.dark {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--sk-neutral-900);
+  background: var(--vp-c-bg-alt);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--sk-neutral-700);
+  background: var(--vp-c-default-3);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--sk-neutral-600);
+  background: var(--vp-c-default-2);
 }
 
 /* ========================================
@@ -414,17 +464,17 @@ html.dark {
    ======================================== */
 
 .DocSearch-Modal {
-  background-color: var(--sk-neutral-900) !important;
-  border: 1px solid var(--sk-neutral-800);
+  background-color: var(--vp-c-bg-alt) !important;
+  border: 1px solid var(--vp-c-border);
 }
 
 .DocSearch-SearchBar {
-  background-color: var(--sk-neutral-950) !important;
+  background-color: var(--vp-c-bg) !important;
 }
 
 .DocSearch-Input {
-  background-color: var(--sk-neutral-800) !important;
-  color: var(--sk-neutral-100) !important;
+  background-color: var(--vp-c-bg-soft) !important;
+  color: var(--vp-c-text-1) !important;
 }
 
 /* ========================================
@@ -432,8 +482,8 @@ html.dark {
    ======================================== */
 
 .VPFooter {
-  background-color: var(--sk-neutral-950);
-  border-top: 1px solid var(--sk-neutral-800);
+  background-color: var(--vp-c-bg);
+  border-top: 1px solid var(--vp-c-border);
 }
 
 /* ========================================
@@ -441,20 +491,20 @@ html.dark {
    ======================================== */
 
 .VPFeature {
-  background-color: var(--sk-neutral-900) !important;
-  border: 1px solid var(--sk-neutral-800);
+  background-color: var(--vp-c-bg-alt) !important;
+  border: 1px solid var(--vp-c-border);
   border-radius: 16px;
   transition: all 0.3s ease;
 }
 
 .VPFeature:hover {
-  border-color: var(--sk-neutral-700);
+  border-color: var(--vp-c-default-3);
   transform: translateY(-2px);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
 .VPFeature .icon {
-  color: var(--sk-accent-500);
+  color: var(--vp-c-brand-2);
 }
 
 /* ========================================
@@ -468,21 +518,21 @@ html.dark {
 }
 
 .VPButton.medium.brand {
-  background-color: var(--sk-accent-500) !important;
-  color: var(--sk-neutral-950) !important;
+  background-color: var(--vp-c-brand-2) !important;
+  color: var(--vp-c-bg) !important;
 }
 
 .VPButton.medium.brand:hover {
-  background-color: var(--sk-accent-400) !important;
+  background-color: var(--vp-c-brand-1) !important;
 }
 
 .VPButton.medium.alt {
-  background-color: var(--sk-neutral-800) !important;
-  border-color: var(--sk-neutral-700) !important;
-  color: var(--sk-neutral-200) !important;
+  background-color: var(--vp-c-bg-alt) !important;
+  border-color: var(--vp-c-border) !important;
+  color: var(--vp-c-text-1) !important;
 }
 
 .VPButton.medium.alt:hover {
-  background-color: var(--sk-neutral-700) !important;
-  border-color: var(--sk-neutral-600) !important;
+  background-color: var(--vp-c-bg-soft) !important;
+  border-color: var(--vp-c-default-3) !important;
 }
