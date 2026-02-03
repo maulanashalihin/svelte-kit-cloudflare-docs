@@ -19,12 +19,9 @@ Project ini menggunakan **3 AI Agent** yang bekerja sama:
 │     └── Buat PRD.md, TDD.md, ui-kit.html, PROGRESS.md          │
 │                                                                  │
 │  2. TASK_AGENT: Implementasi fitur                              │
-│     └── Baca PROGRESS.md → Implement → Test → Commit           │
+│     └── Baca PROGRESS.md → Implement → Test → Commit           │ 
 │                                                                  │
-│  3. Cloudflare: Auto deployment                                 │
-│     └── Build → Deploy → Smoke tests                           │
-│                                                                  │
-│  4. MANAGER_AGENT: Change management                            │
+│  3. MANAGER_AGENT: Change management                            │
 │     └── Update docs → Approve → Release notes                  │
 │                                                                  │
 └─────────────────────────────────────────────────────────────────┘
@@ -32,7 +29,7 @@ Project ini menggunakan **3 AI Agent** yang bekerja sama:
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Quick Start {#quick-start}
 
 Gunakan 3 command ini untuk memulai:
 
@@ -213,7 +210,7 @@ MANAGER_AGENT:
 
 ---
 
-## 🔄 End-to-End Example
+## 🔄 End-to-End Example {#end-to-end-example}
 
 ### Scenario: Membuat Aplikasi Todo List
 

@@ -43,10 +43,11 @@ export default defineConfig({
           collapsed: false,
           items: [
             { text: 'Overview', link: '/guide/ai-first-development' },
-            { text: 'INIT_AGENT - Setup', link: '/guide/ai-first-development#init-agent' },
-            { text: 'TASK_AGENT - Implement', link: '/guide/ai-first-development#task-agent' },
-            { text: 'MANAGER_AGENT - Manage', link: '/guide/ai-first-development#manager-agent' },
-            { text: 'Prompt Templates', link: '/guide/ai-first-development#prompt-templates' }
+            { text: 'Quick Start', link: '/guide/ai-first-development#quick-start' },
+            { text: 'INIT_AGENT — Setup', link: '/guide/ai-first-development#init-agent' },
+            { text: 'TASK_AGENT — Implement', link: '/guide/ai-first-development#task-agent' },
+            { text: 'MANAGER_AGENT — Manage', link: '/guide/ai-first-development#manager-agent' },
+            { text: 'End-to-End Example', link: '/guide/ai-first-development#end-to-end-example' }
           ]
         },
         {
