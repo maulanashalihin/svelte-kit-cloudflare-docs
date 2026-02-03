@@ -218,11 +218,48 @@ html.dark {
 }
 
 /* ========================================
-   Custom Blocks
+   Custom Blocks - Light Mode
    ======================================== */
 
-:root,
-html,
+:root {
+  --vp-custom-block-tip-border: #f59e0b;
+  --vp-custom-block-tip-text: #92400e;
+  --vp-custom-block-tip-bg: rgba(245, 158, 11, 0.1);
+  --vp-custom-block-tip-code-bg: rgba(245, 158, 11, 0.15);
+
+  --vp-custom-block-info-border: #6b7280;
+  --vp-custom-block-info-text: #374151;
+  --vp-custom-block-info-bg: rgba(107, 114, 128, 0.1);
+  --vp-custom-block-info-code-bg: rgba(107, 114, 128, 0.15);
+
+  --vp-custom-block-warning-border: #f59e0b;
+  --vp-custom-block-warning-text: #92400e;
+  --vp-custom-block-warning-bg: rgba(251, 191, 36, 0.1);
+  --vp-custom-block-warning-code-bg: rgba(251, 191, 36, 0.15);
+
+  --vp-custom-block-danger-border: #ef4444;
+  --vp-custom-block-danger-text: #991b1b;
+  --vp-custom-block-danger-bg: rgba(239, 68, 68, 0.1);
+  --vp-custom-block-danger-code-bg: rgba(239, 68, 68, 0.15);
+}
+
+/* Custom block titles - Light */
+.vp-doc .custom-block.tip .custom-block-title {
+  color: #d97706;
+}
+
+.vp-doc .custom-block.info .custom-block-title {
+  color: #4b5563;
+}
+
+.vp-doc .custom-block.warning .custom-block-title {
+  color: #d97706;
+}
+
+/* ========================================
+   Custom Blocks - Dark Mode
+   ======================================== */
+
 html.dark {
   --vp-custom-block-tip-border: var(--sk-accent-500);
   --vp-custom-block-tip-text: var(--sk-neutral-100);
@@ -245,16 +282,16 @@ html.dark {
   --vp-custom-block-danger-code-bg: rgba(64, 64, 64, 0.5);
 }
 
-/* Custom block titles */
-.vp-doc .custom-block.tip .custom-block-title {
+/* Custom block titles - Dark */
+html.dark .vp-doc .custom-block.tip .custom-block-title {
   color: var(--sk-accent-400);
 }
 
-.vp-doc .custom-block.info .custom-block-title {
+html.dark .vp-doc .custom-block.info .custom-block-title {
   color: var(--sk-neutral-300);
 }
 
-.vp-doc .custom-block.warning .custom-block-title {
+html.dark .vp-doc .custom-block.warning .custom-block-title {
   color: #fbbf24;
 }
 
@@ -313,13 +350,22 @@ html.dark {
    ======================================== */
 
 .vp-doc a {
-  color: var(--sk-accent-400);
+  color: #d97706;
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: all 0.2s;
 }
 
 .vp-doc a:hover {
+  color: #b45309;
+  border-bottom-color: #f59e0b;
+}
+
+html.dark .vp-doc a {
+  color: var(--sk-accent-400);
+}
+
+html.dark .vp-doc a:hover {
   color: var(--sk-accent-300);
   border-bottom-color: var(--sk-accent-500);
 }
@@ -354,6 +400,11 @@ html.dark {
   color: var(--vp-c-text-1);
   background-color: transparent;
   padding: 0;
+}
+
+/* Plain code blocks (no language specified) like ASCII art */
+.vp-doc pre {
+  color: var(--vp-c-text-1);
 }
 
 /* Syntax highlighting colors yang lebih nyaman */
